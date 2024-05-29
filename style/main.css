@@ -1,0 +1,379 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+main,
+root,
+html {
+  height: 100dvh;
+  background-color: #fffdf5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #121212;
+}
+
+body {
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  left: 0;
+}
+.navbar .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .search button {
+  background: none;
+  border: none;
+}
+.navbar .search input {
+  background: none;
+  border: none;
+  border: #fff;
+  border-bottom: 2px solid #000;
+  outline: none;
+}
+.navbar .search .navbar-icons {
+  margin: 0 15px;
+  width: 1.5rem;
+}
+
+.navbar_wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.hambMenu {
+  display: none;
+}
+
+.popup {
+  display: none;
+}
+
+.logoImg {
+  width: 50%;
+}
+
+.navbar_wrap .menu {
+  display: none;
+}
+
+.hambMenu {
+  display: flex;
+  align-items: start;
+}
+
+.hambMenu_field {
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px auto;
+  transition: 0.5s;
+  background: #000;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  transition: 0.5s;
+  margin-left: 5%;
+}
+
+.popup.open {
+  left: 0;
+}
+
+.popup .menu {
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 10rem;
+  background: #121212;
+}
+
+.popup .menu > li {
+  margin-left: 10%;
+  color: #fffdf5;
+  list-style-type: none;
+}
+
+.popup .menu > li > a {
+  display: flex;
+  justify-content: start;
+  padding: 20px 0;
+  color: #fffdf5;
+  text-decoration: none;
+}
+
+.hambMenu_field.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hambMenu_field.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hambMenu_field.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+.hero {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.hero h1 {
+  font-size: 5rem;
+  font-weight: lighter;
+  margin: 0;
+}
+.hero h1 .accent-font {
+  font-family: Bad Script, cursive;
+  color: #514A7E;
+  line-height: 1rem;
+}
+.hero .description {
+  font-size: 1rem;
+  color: #7b7b7b;
+}
+@media screen and (max-width: 768px) {
+  .hero .second {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    opacity: 0;
+  }
+}
+.catalog {
+  display: block;
+  border: 2px solid #514A7E;
+  border-radius: 50%;
+  background: none;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+}
+.catalog a {
+  font-size: 1.5rem;
+  color: #514A7E;
+  text-decoration: none;
+}
+.catalog a:active {
+  color: #514A7E;
+}
+.catalog img {
+  display: block;
+  margin: auto;
+  color: #514A7E;
+}
+
+.tabs h1 {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+.tabs .info {
+  padding: 50px 0;
+}
+.tabs .info .hide {
+  display: none;
+  opacity: 0;
+}
+.tabs .info .show {
+  display: block;
+}
+.tabs .info .info-header {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+.tabs .info .info-header .info-header-tab {
+  width: 5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  margin: 0 15px;
+  padding: 10px;
+}
+.tabs .info .info-tabContent {
+  padding: 25px;
+  margin: 25px auto;
+  width: 90%;
+  background: #ffffff;
+  border: 0.5px solid #e3e3e3;
+}
+.tabs .info .info-tabContent .card {
+  display: grid;
+  justify-items: center;
+}
+.tabs .info .info-tabContent .card p {
+  width: 80%;
+  color: #7b7b7b;
+  font-size: 3rem;
+  text-align: center;
+}
+.tabs .info .fade {
+  animation: fade 2.5s;
+  -webkit-animation: fade 2.5s;
+}
+.tabs .info .active {
+  background-color: #514A7E;
+  color: #fff;
+}
+
+.container {
+  padding: 30px;
+}
+.container h1 {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+.container h1 .accent-font {
+  position: relative;
+  top: 3rem;
+  left: 3rem;
+  font-family: Bad Script, cursive;
+  color: #514A7E;
+}
+.container hr {
+  width: 100%;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+.container .box {
+  position: relative;
+  margin-bottom: 20px;
+  /* Нижний отступ между элементами аккордеона */
+}
+.container .box:last-child {
+  margin-bottom: 0;
+  /* Для последнего элемента нижний отступ убираем */
+}
+.container .box .label {
+  position: relative;
+  padding: 20px;
+  font-weight: bold;
+  /* Цвет шрифта элемента аккордеона */
+  cursor: pointer;
+  /* Меняем курсор при наведении */
+}
+.container .box .label::after {
+  content: "+";
+  /* Задаем иконку "+" для элемента аккордеона */
+  position: absolute;
+  top: 50%;
+  /* Выравнивание по центру */
+  transform: translateY(-50%);
+  right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.container .box.active .label::after {
+  content: "—";
+  /* Меняем иконку на "-" при нажатии на элемент */
+}
+.container .box .content {
+  position: relative;
+  /* Цвет фона контента */
+  overflow: hidden;
+  max-height: 0;
+  /* Скрываем контент */
+  transition: 0.3s;
+  /* Для плавности анимации */
+}
+.container .box .content p {
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    display: grid;
+    justify-content: center;
+  }
+}
+.modal-window {
+  display: none;
+  position: sticky;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  margin: auto;
+  margin-top: 0%;
+  width: 30%;
+  background-color: #efe2ff;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  padding: 5% 10%;
+  font-weight: bold;
+}
+.modal-window h1 {
+  text-align: left;
+  color: #320076;
+  font-size: 20pt;
+}
+.modal-window p {
+  color: black;
+  font-size: 10pt;
+}
+.modal-window button {
+  background-color: #ffce42;
+  font-size: 20pt;
+  border: solid 2pt black;
+  border-radius: 100px;
+  padding: 1% 5%;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal-window .cross {
+  padding: 1% 2%;
+  margin-right: -15%;
+  margin-bottom: -10%;
+  margin-left: auto;
+  font-size: 15pt;
+}
+.modal-window input {
+  display: flex;
+  margin: 10% auto 5% auto;
+  width: 100%;
+  height: 40pt;
+  font-size: 30pt;
+  background-color: white;
+  border: solid 2px black;
+  border-radius: 10pt;
+}
+
+.modal-window.active {
+  margin: auto;
+  margin-bottom: -32%;
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+}/*# sourceMappingURL=main.css.map */
